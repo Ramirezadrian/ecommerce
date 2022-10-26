@@ -7,4 +7,4 @@ const messageSchema = new Schema({
  body: { type: String, required: true, max: 500 }
 })
 
-module.exports = model('Message', productSchema)
+module.exports = model('Message', messageSchema)

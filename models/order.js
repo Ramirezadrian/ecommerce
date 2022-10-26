@@ -8,4 +8,4 @@ const orderSchema = new Schema({
  email: { type: String, required: true, max: 100}
 })
 
-module.exports = model('Order', productSchema)
+module.exports = model('Order', orderSchema)

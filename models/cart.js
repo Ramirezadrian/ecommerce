@@ -8,4 +8,4 @@ const cartSchema = new Schema({
  dir: { type: String, required: true, max: 500 }
 })
 
-module.exports = model('Cart', productSchema)
+module.exports = model('Cart', cartSchema)

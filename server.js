@@ -4,6 +4,7 @@ const dotenv = require('dotenv')
 const path = require('path')
 
 const productRouterFn = require('./Routers/productRouter')
+const cartRouterFn = require('./Routers/cartRouter')
 
 dotenv.config({
   path: path.resolve(process.cwd(), process.env.NODE_ENV + '.env')
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 
 
 app.use('/api/products', productRouterFn())
+app.use('/api/carrito', cartRouterFn())
 const PORT = process.env.PORT || 8080
 
 const server = app.listen(PORT, () => {

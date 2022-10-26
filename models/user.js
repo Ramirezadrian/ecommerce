@@ -8,4 +8,4 @@ const userSchema = new Schema({
  pass: { type: String, required: true, max: 16}
 })
 
-module.exports = model('User', productSchema)
+module.exports = model('User', userSchema)
