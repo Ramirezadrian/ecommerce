@@ -12,10 +12,16 @@ const productRouterFn = () => {
     const productRouter = Router()
 
     productRouter.get('/', productController.getAll.bind(productController))
+   productRouter.get('/:id', productController.getOne.bind(productController))
+    productRouter.get('/categoria/:category', productController.getByCategory.bind(productController))///category= (categoria deseada)
+
     productRouter.post('/', productController.create.bind(productController)) 
-    productRouter.get('/:id', productController.getOne.bind(productController))
+    
     productRouter.put('/:id', productController.update.bind(productController))
+
     productRouter.delete('/:id', productController.delete.bind(productController))
+
+   
 
     return productRouter
 

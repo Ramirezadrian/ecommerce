@@ -22,6 +22,7 @@ class ProductController {
     }
 
     getOne (req, res) {
+
         const { id } = req.params
 
         return this.service.getOne(id)
@@ -51,6 +52,17 @@ class ProductController {
             .catch(e => res.status(500).json({
                 error: e.message
             }))
+    }
+
+    //Devuelve los productos que coinciden con la categoria 
+    getByCategory (req, res) {
+        const {category} = req.params
+       
+        return this.service.getByCategory(category)
+            .then(productsByCategory => res.json(productsByCategory))
+            .catch(e => res.status(500).json({
+                error: e.message
+            }))            
     }
 }
 

@@ -22,6 +22,10 @@ class ProductService {
     delete (id) {
         return this.repository.delete(id)
     }
+
+    getByCategory (category) {
+        return this.repository.getByCategory(category)
+    }
 }
 
 module.exports = ProductService

@@ -27,6 +27,9 @@ class ProductRepository {
     delete (id) {
         return this.dao.delete(id)
     }
+    
+    getByCategory (category) {
+        return this.dao.getByCategory(category)
+    }
 }
-
 module.exports = ProductRepository
