@@ -12,10 +12,16 @@ const cartRouterFn = () => {
     const cartRouter = Router()
 
     cartRouter.get('/', cartController.getAll.bind(cartController))
+
+    cartRouter.get('/:id/productos', cartController.getProducts.bind(cartController))
     cartRouter.post('/', cartController.create.bind(cartController)) 
-    cartRouter.get('/:id', cartController.getOne.bind(cartController))
-    cartRouter.put('/:id', cartController.update.bind(cartController))
+    cartRouter.post('/:id/productos', cartController.addProduct.bind(cartController))
     cartRouter.delete('/:id', cartController.delete.bind(cartController))
+    cartRouter.delete('/:id/productos/:id_prod', cartController.removeProduct.bind(cartController))
+
+    cartRouter.put('/:id/productos', cartController.update.bind(cartController))
+
+    cartRouter.get('/:id', cartController.getOne.bind(cartController))
 
     return cartRouter
 

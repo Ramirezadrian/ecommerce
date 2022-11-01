@@ -24,6 +24,21 @@ class CartRepository {
     delete (id) {
         return this.dao.delete(id)
     }
+
+    getProducts (id) {
+        
+        return this.dao.getProducts(id)
+    }
+
+    addProduct (id, data) {
+       
+        return this.dao.addProduct(id, data)
+    }
+
+    removeProduct (id, id_prod) {
+        return this.dao.removeProduct(id, id_prod)
+    }
+    
 }
 
 module.exports = CartRepository

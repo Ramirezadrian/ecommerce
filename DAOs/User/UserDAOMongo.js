@@ -6,9 +6,9 @@ class UserDAOMongo {
         this.model = model
     }
 
-/*     getAll () {
+    getAll () {
         return this.model.find()
-    } */
+    } 
 
     create (data) {
         return this.model.create(data)
